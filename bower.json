@@ -2,7 +2,8 @@
   "name": "bp-numbers",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "~3.3.5"
+    "bootstrap-sass": "~3.3.5",
+    "hover": "Hover#^2.1.0"
   },
   "overrides": {
     "bootstrap-sass": {

@@ -2,6 +2,7 @@ $icon-font-path: '../fonts/';
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
+@import "bower_components/hover/scss/hover.scss";
 @import "font.scss";
 .bp_num {
     width: 100%;
@@ -35,6 +36,7 @@ $icon-font-path: '../fonts/';
             font-family: 'bebas_neuelight';
             width: 100%;
             display: inline-block;
+            line-height: 1.2em;
         }
     }
 }
@@ -57,34 +59,57 @@ $icon-font-path: '../fonts/';
             background: #042bf7;
             border: 3px solid #fff;
             position: absolute;
+            &.hvr-ripple-out::before {
+                border: 2px solid #fff;
+                border-radius: 50%;
+                left: -2px;
+                right: -2px;
+                bottom: -2px;
+                top: -2px;
+                animation-duration: 0.5s;
+            }
             &#bp_dot_1 {
                 left: 0%;
                 top: 16px;
+                @media (max-width: $screen-lg) {
+                    top: 93px;
+                }
             }
             &#bp_dot_2 {
                 left: 25%;
                 top: 112px;
+                @media (max-width: $screen-lg) {
+                    top: 57px;
+                }
             }
             &#bp_dot_3 {
                 left: 50%;
                 top: 167px;
+                @media (max-width: $screen-lg) {
+                    top: 167px;
+                }
             }
             &#bp_dot_4 {
                 left: 75%;
                 top: 191px;
+                @media (max-width: $screen-lg) {
+                    top: 88px;
+                }
             }
             &#bp_dot_5 {
                 right: 0%;
                 margin-right: -5px;
                 top: 150px;
+                @media (max-width: $screen-lg) {
+                    top: 220px;
+                }
             }
             &+ .tooltip > .tooltip-inner {
-
                 font-family: 'bebas_neue_regularregular';
                 background-color: #fff;
                 color: #14151b;
-                font-size:17px;    
-                padding: 1em 2em; 
+                font-size: 17px;
+                padding: 1em 2em;
                 border-radius: 0.2em;
             }
             /* Tooltip on top */
